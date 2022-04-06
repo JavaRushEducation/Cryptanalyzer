@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox minHeight="156.0" minWidth="500.0" prefHeight="156.0" prefWidth="575.0" spacing="20.0"
+      xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.cryptanalyzer.controllers.BruteForceDecipherController">
+    <Label prefHeight="24.0" prefWidth="529.0" text="Загрузите файл с данными">
+        <font>
+            <Font size="14.0"/>
+        </font>
+        <VBox.margin>
+            <Insets bottom="-20.0"/>
+        </VBox.margin>
+    </Label>
+    <Button fx:id="fileChooserButton" minWidth="528.0" onAction="#onFileChooser" prefHeight="33.0" prefWidth="528.0"
+            text="ВЫБРАТЬ">
+        <graphic>
+            <TextField fx:id="fileNameTextField" prefHeight="25.0" prefWidth="452.0"/>
+        </graphic>
+    </Button>
+    <Pane prefHeight="27.0" prefWidth="527.0">
+        <children>
+            <Label fx:id="errorTitleLabel" layoutX="138.0" layoutY="5.0" prefHeight="17.0" prefWidth="383.0"
+                   textFill="#ee0000"/>
+            <Button layoutY="1.0" mnemonicParsing="false" onAction="#onStart" prefHeight="25.0" prefWidth="119.0"
+                    text="Старт"/>
+            <Label fx:id="infoTitleLabel" layoutX="138.0" layoutY="5.0" prefHeight="17.0" prefWidth="383.0"
+                   textFill="#0b07ee"/>
+        </children>
+    </Pane>
+    <padding>
+        <Insets bottom="24.0" left="24.0" right="24.0" top="24.0"/>
+    </padding>
+</VBox>
